@@ -1,0 +1,46 @@
+/*length of the sentence*/
+ALGORITHM length of the sentence
+VAR
+ word :CHAR
+ nb :INTEGER
+BEGIN
+ Write("length of the sentence:")
+ Read word
+ nb = length(word)
+END
+
+/* The number of words in the sentence*/
+ALGORITHM The number of words in the sentence
+VAR
+ word: CHAR
+ nb : INTEGER
+ i : INTEGER
+BEGIN
+ Write("the number of words:")
+ Read word
+ nb = 0
+FOR i FROM 1 TO length(word)  DO
+ if Mid(word , i ,1)  = "" THEN
+  nb = nb+1
+ END_If
+  i++
+END_FOR
+END
+/* The number of vowels in the sentence*/
+
+ALGORITHM The number of vowels in the sentence
+VAR
+ word: CHAR
+ nb : INTEGER
+ j : INTEGER
+ BEGIN
+ Write("The number of vowels in the sentence:")
+ Read word
+ nb = 0
+ FOR j FROM 1 TO length(word)  DO
+  IF  Mid(word, j, 1) = "a" ou Mid(word, j, 1) = "e" ou Mid(word, j, 1) = "i" ou Mid(word,j, 1) = "o" ou Mid(word, j, 1) = "u" ou Mid(word, j, 1) = "y"  THEN
+    nb = nb+1
+  END_IF
+  j++
+ END_FOR
+END
